@@ -1,0 +1,4 @@
+# Targets Home Assistant Core 2026.9.2 (current stable when the scaffold was
+# created). 0.13.365 is the release that pins homeassistant==2026.9.2 and
+# requires Python >=3.14.
+pytest-homeassistant-custom-component==0.13.365
