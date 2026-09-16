@@ -44,6 +44,7 @@ Out of scope: Growspace Manager changes, printer selection UI, backend abstracti
     "config_flow": true,
     "integration_type": "device",
     "iot_class": "local_push",
+    "issue_tracker": "https://github.com/Venosta-web/hass-ypl-printer/issues",
     "dependencies": ["bluetooth_adapters"],
     "bluetooth": [{ "local_name": "Y50*", "connectable": true }],
     "requirements": []

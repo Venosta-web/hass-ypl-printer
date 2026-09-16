@@ -133,7 +133,8 @@ pip install -r requirements_test.txt
 pytest
 ```
 
-CI runs `pytest`, `hassfest`, and HACS validation on every push.
+CI runs `pytest` and `hassfest` on every push, and HACS validation on pull
+requests, pushes to `main`, and weekly.
 
 ### Releasing
 
