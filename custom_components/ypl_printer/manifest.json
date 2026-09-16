@@ -1,0 +1,13 @@
+{
+  "domain": "ypl_printer",
+  "name": "YPL Printer",
+  "bluetooth": [{ "local_name": "Y50*", "connectable": true }],
+  "codeowners": ["@Venosta-web"],
+  "config_flow": true,
+  "dependencies": ["bluetooth_adapters"],
+  "documentation": "https://github.com/Venosta-web/hass-ypl-printer",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "requirements": [],
+  "version": "0.1.0"
+}
