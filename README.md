@@ -1,3 +1,8 @@
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
+[![Quality Scale](https://img.shields.io/badge/Quality%20Scale-Gold-gold.svg?style=for-the-badge)](https://developers.home-assistant.io/docs/integration-quality-scale/)
+[![Version](https://img.shields.io/badge/Version-0.1.0-blue.svg?style=for-the-badge)](https://github.com/Venosta-web/hass-ypl-printer/releases)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
 # hass-ypl-printer
 
 Home Assistant custom integration for YPL thermal label printers. It is a
