@@ -12,5 +12,71 @@
       "not_supported": "The printer does not offer the YPL Bluetooth profile (service 0x18F0 with characteristics 0x2AF0 and 0x2AF1).",
       "discovery_only": "YPL printers are added automatically when Home Assistant discovers them over Bluetooth. Switch the printer on near a Bluetooth adapter and wait for it to appear."
     }
+  },
+  "exceptions": {
+    "invalid_target": {
+      "message": "Device {device_id} is not exactly one YPL printer. Choose a single YPL printer device."
+    },
+    "printer_not_loaded": {
+      "message": "The printer {name} is not loaded. Enable or reload its configuration entry and try again."
+    },
+    "empty_text": {
+      "message": "The label text is empty. Enter at least one visible character."
+    },
+    "unsupported_character": {
+      "message": "The label text contains the unsupported character {codepoint} at position {position}. Only Basic Latin characters (U+0020 to U+007E) and line breaks are allowed."
+    },
+    "text_does_not_fit": {
+      "message": "The {lines} line(s) of label text do not fit on a 50 x 30 mm label at the smallest font size. Shorten the lines or use fewer of them."
+    },
+    "render_failed": {
+      "message": "The label could not be rendered ({error}). Nothing was sent to the printer."
+    },
+    "printer_busy": {
+      "message": "The printer {name} is busy. Nothing was sent to it; try again later."
+    },
+    "printer_not_found": {
+      "message": "The printer {name} was not found by a connectable Bluetooth adapter. Nothing was sent to it. {reachability}"
+    },
+    "no_connection_slots": {
+      "message": "No Bluetooth connection slot is free to reach the printer {name}. Nothing was sent to it; try again later."
+    },
+    "connection_failed": {
+      "message": "Failed to connect to the printer {name} ({error}). Nothing was sent to it."
+    },
+    "unsupported_profile": {
+      "message": "The printer {name} does not offer the YPL Bluetooth profile (service 0x18F0 with characteristics 0x2AF0 and 0x2AF1). Nothing was sent to it."
+    },
+    "communication_failed": {
+      "message": "Communication with the printer {name} failed before printing ({error}). Nothing was sent to it."
+    },
+    "printer_not_ready": {
+      "message": "The printer {name} is not ready: {flags} ({raw}). Nothing was sent to it; check the printer and try again."
+    },
+    "outcome_uncertain_transport": {
+      "message": "The connection to the printer {name} failed while sending the label. The label may or may not have printed. Do not resend it automatically; check the printer and the label before printing again. Chunks sent: {sent} of {total}. Last status: {flags} ({raw})."
+    },
+    "outcome_uncertain_printer_error": {
+      "message": "The printer {name} reported an error after the label was sent. The label may or may not have printed. Do not resend it automatically; check the printer and the label before printing again. Chunks sent: {sent} of {total}. Last status: {flags} ({raw})."
+    },
+    "outcome_uncertain_still_printing": {
+      "message": "The printer {name} was still printing when Home Assistant stopped waiting. The label may or may not have printed. Do not resend it automatically; check the printer and the label before printing again. Chunks sent: {sent} of {total}. Last status: {flags} ({raw})."
+    }
+  },
+  "services": {
+    "print": {
+      "name": "Print label",
+      "description": "Prints one 50 x 30 mm text label on a YPL printer and waits for the job to finish. A normal completion is not proof that a label was produced.",
+      "fields": {
+        "device_id": {
+          "name": "Printer",
+          "description": "The YPL printer device to print on."
+        },
+        "text": {
+          "name": "Text",
+          "description": "Basic Latin label text. Line breaks start new lines; text is never wrapped or shortened."
+        }
+      }
+    }
   }
 }
