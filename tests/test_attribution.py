@@ -43,3 +43,17 @@ def test_notices_contain_full_mit_notice(
     assert MIT_WARRANTY_DISCLAIMER in text
 
     assert text in NOTICES.read_text()
+
+
+def test_dejavu_licence_ships_beside_font() -> None:
+    """The unmodified DejaVu Fonts 2.37 licence sits next to the bundled TTF."""
+    font_dir = REPO_ROOT / "custom_components" / "ypl_printer" / "fonts"
+    licence = (font_dir / "LICENSE").read_bytes()
+
+    assert (font_dir / "DejaVuSans.ttf").is_file()
+    assert (
+        hashlib.sha256(licence).hexdigest()
+        == "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93"
+    )
+    assert b"Bitstream Vera Fonts Copyright" in licence
+    assert b"Arev Fonts Copyright" in licence
