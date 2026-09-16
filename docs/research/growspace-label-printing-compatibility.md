@@ -168,4 +168,3 @@ requirements.
 - The element payload names fonts that are expected to be understood downstream. This research
   did not establish font metric equivalence between hass-niimbot and the YPL prototype's
   bundled font, so pixel-identical label composition is not implied.
-
