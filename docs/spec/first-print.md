@@ -508,10 +508,10 @@ Optional, recorded but not acceptance: cover open (expected `printer_not_ready`)
 
 Tickets are listed on map #1. Each blocks the ones after it except where noted.
 
-1. Project scaffold and CI — §2.
-2. YPL protocol module — §3, §9 protocol tests.
-3. Deterministic renderer — §5.4–§5.7, §8, §9 renderer tests (parallel with 2).
-4. Config flow and device lifecycle — §4, §9 config-flow tests (after 1).
-5. Print action contract — §5.1–§5.3, §5.8–§5.9, §7, §9 service tests (after 2, 3, 4).
-6. Transmission state machine — §6, §9 state-machine and end-to-end tests (after 5).
-7. Hardware test (HITL) — §10–§12 (after 6).
+1. [#13](https://github.com/Venosta-web/hass-ypl-printer/issues/13) Project scaffold and CI — §2.
+2. [#14](https://github.com/Venosta-web/hass-ypl-printer/issues/14) YPL protocol module — §3, §9 protocol tests.
+3. [#15](https://github.com/Venosta-web/hass-ypl-printer/issues/15) Deterministic renderer — §5.4–§5.7, §8, §9 renderer tests (parallel with 2).
+4. [#16](https://github.com/Venosta-web/hass-ypl-printer/issues/16) Config flow and device lifecycle — §4, §9 config-flow tests (after 1).
+5. [#17](https://github.com/Venosta-web/hass-ypl-printer/issues/17) Print action contract — §5.1–§5.3, §5.8–§5.9, §7, §9 service tests (after 2, 3, 4).
+6. [#18](https://github.com/Venosta-web/hass-ypl-printer/issues/18) Transmission state machine — §6, §9 state-machine and end-to-end tests (after 5).
+7. [#19](https://github.com/Venosta-web/hass-ypl-printer/issues/19) Hardware test (HITL) — §10–§12 (after 6).
