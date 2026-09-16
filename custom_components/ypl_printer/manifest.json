@@ -8,6 +8,7 @@
   "documentation": "https://github.com/Venosta-web/hass-ypl-printer",
   "integration_type": "device",
   "iot_class": "local_push",
+  "issue_tracker": "https://github.com/Venosta-web/hass-ypl-printer/issues",
   "requirements": [],
   "version": "0.1.0"
 }
