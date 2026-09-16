@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  version:
+    name: Check manifest version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Compare release tag with manifest.json
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          manifest="$(jq -r .version custom_components/ypl_printer/manifest.json)"
+          if [ "$tag" != "$manifest" ]; then
+            echo "::error::Release tag $GITHUB_REF_NAME does not match manifest.json version $manifest"
+            exit 1
+          fi
