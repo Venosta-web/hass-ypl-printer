@@ -1,0 +1,14 @@
+print:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          filter:
+            integration: ypl_printer
+          multiple: false
+    text:
+      required: true
+      selector:
+        text:
+          multiline: true
