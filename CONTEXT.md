@@ -47,3 +47,15 @@ _Avoid_: Ready check, handshake
 **Post-send observation**:
 Bounded status polling after the last stream write and before disconnect. It can reveal a printer error or unfinished printing, but even a ready status is not proof that a physical label was produced.
 _Avoid_: Print confirmation, completion wait
+
+**Acceptance specimen**:
+The one fixed label text used for the golden renderer and byte tests and printed during the hardware procedure. It covers uppercase, lowercase, digits, punctuation, spaces, and a blank line.
+_Avoid_: Test string, sample label
+
+**Hardware test report**:
+The committed record of one run of the hardware procedure on a named installation and Bluetooth path, including each step's result and a photograph of any output. Print compatibility is claimed only through such a report.
+_Avoid_: Test log, success screenshot
+
+**Determinism deviation**:
+A hardware-test observation that the raster or job produced on the installed runtime differs from the pinned golden values. It is recorded and reviewed against the renderer contract, but on its own it neither proves nor disproves print compatibility.
+_Avoid_: Render bug, failed print
