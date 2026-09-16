@@ -1,0 +1,16 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "bluetooth_confirm": {
+        "description": "Do you want to set up {name}? Home Assistant will briefly connect to the printer to check that it offers the YPL Bluetooth profile. Nothing is printed."
+      }
+    },
+    "abort": {
+      "already_configured": "This printer is already configured.",
+      "cannot_connect": "Failed to connect to the printer. Make sure it is switched on and in range, then try again.",
+      "not_supported": "The printer does not offer the YPL Bluetooth profile (service 0x18F0 with characteristics 0x2AF0 and 0x2AF1).",
+      "discovery_only": "YPL printers are added automatically when Home Assistant discovers them over Bluetooth. Switch the printer on near a Bluetooth adapter and wait for it to appear."
+    }
+  }
+}
