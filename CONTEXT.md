@@ -55,3 +55,7 @@ _Avoid_: Test string, sample label
 **Hardware test report**:
 The committed record of one run of the hardware procedure on a named installation and Bluetooth path, including each step's result and a photograph of any output. Print compatibility is claimed only through such a report.
 _Avoid_: Test log, success screenshot
+
+**Determinism deviation**:
+A hardware-test observation that the raster or job produced on the installed runtime differs from the pinned golden values. It is recorded and reviewed against the renderer contract, but on its own it neither proves nor disproves print compatibility.
+_Avoid_: Render bug, failed print
