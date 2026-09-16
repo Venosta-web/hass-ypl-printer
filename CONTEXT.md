@@ -35,3 +35,15 @@ _Avoid_: Print confirmation, success receipt
 **Uncertain physical outcome**:
 A print job that fails after transmission has begun, when the integration cannot safely determine whether the printer produced some or all of the label. Such a job must not be replayed automatically.
 _Avoid_: Failed print, safe retry
+
+**Transmission boundary**:
+The moment the first write of a print stream is started, whether or not that write succeeds. Any failure, timeout, or cancellation after this point is an uncertain physical outcome; before it, the printer is known not to have received print data. Preflight status polls do not cross it.
+_Avoid_: First completed write, retry point
+
+**Preflight readiness check**:
+Bounded status polling before the transmission boundary. A readable non-ready status stops the job cleanly; silence is unknown and does not block printing.
+_Avoid_: Ready check, handshake
+
+**Post-send observation**:
+Bounded status polling after the last stream write and before disconnect. It can reveal a printer error or unfinished printing, but even a ready status is not proof that a physical label was produced.
+_Avoid_: Print confirmation, completion wait
