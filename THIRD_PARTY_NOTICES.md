@@ -3,7 +3,9 @@
 This project ports protocol logic and vendors test fixtures from the projects
 below. Their licences are reproduced in full.
 
-The DejaVu Fonts licence ships beside the bundled font.
+The bundled font is the unmodified `DejaVuSans.ttf` from DejaVu Fonts 2.37
+(https://dejavu-fonts.github.io/). Its licence ships beside it in
+`custom_components/ypl_printer/fonts/LICENSE`.
 
 ## yplib
 
